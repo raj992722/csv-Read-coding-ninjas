@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CSV File Upload and Display</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="csv" accept=".csv" required>
+        <button type="submit">Upload CSV</button>
+    </form>
+
+    <h2>Uploaded CSV Files</h2>
+    <ul id="fileList"></ul>
+
+    <h2>Data</h2>
+    <select id="fileSelect"></select>
+    <input type="text" id="search" placeholder="Search">
+    <table id="dataTable">
+        <!-- Table headers and data will be inserted here dynamically -->
+    </table>
+
+    <script src="main.js"></script>
+</body>
+</html>
